@@ -2,5 +2,7 @@
 
 choise=$(echo -e "NO\nYES" | dmenu -i -p "Are you sure?")
 
-echo $choise
-
+if [[ $choise = "YES" ]]
+then
+	$(shutdown now)
+fi
